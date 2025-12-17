@@ -1,6 +1,6 @@
 # Proyectx1
 
-This is a 2D police simulator game. It has monochrome sprites, and it's rendered on GLS2, on Godot 3.3. 
+This is a 2D police simulator game. It has monochrome sprites, and it's rendered on GLS2, on Godot 3.3. The game is divided into short chapters called "cases".
 Controls are:
 
 W - Moving forward

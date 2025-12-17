@@ -39,3 +39,13 @@ func _on_enter_building_1_body_entered(_body):
 	Blink.building_1 = true
 # warning-ignore:return_value_discarded
 	get_tree().change_scene("res://SCENES/portal_building_1.tscn")
+
+
+func _on_enter_sushi_body_entered(_body):
+	$enter_sushi/advert_enter_sushi.show()
+	
+
+
+
+func _on_enter_sushi_body_exited(_body):
+	$enter_sushi/advert_enter_sushi.hide()

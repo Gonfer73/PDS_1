@@ -23,7 +23,6 @@ func _input(_event):
 
 func _on_enter_guns_body_entered(_body):
 	if area:
-		print("HELLO WORLD")
 		Blink.guns = true
 		Blink.shoot = true
 # warning-ignore:return_value_discarded

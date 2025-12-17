@@ -57,6 +57,7 @@ var npc_3 = false
 var npc_4 = false
 var npc_house_building_1_p = 0
 var npc_witness_1 = false
+var number_called: String
 var office_scr = 0
 var out = false
 var pl_age: int
@@ -81,6 +82,7 @@ var talking = false
 var tap_state = "OFF"
 var tap: bool
 var tap_frame = 0
+var telephone_number: Array
 var update_speedmeter = true
 var water = false
 var with_knife = false

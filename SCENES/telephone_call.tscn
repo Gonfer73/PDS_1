@@ -1,0 +1,249 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://SPRITES/telephone_cabin.png" type="Texture" id=1]
+[ext_resource path="res://SPRITES/Instruction Bold.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://SCRIPTS/telephone_call.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 36
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 30
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 2 )
+
+[node name="telephone_call" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="telephone_keys_buttons" type="Node2D" parent="."]
+
+[node name="Button_1" type="Button" parent="telephone_keys_buttons"]
+margin_left = 160.0
+margin_top = 112.0
+margin_right = 312.0
+margin_bottom = 232.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_2" type="Button" parent="telephone_keys_buttons"]
+margin_left = 360.0
+margin_top = 112.0
+margin_right = 512.0
+margin_bottom = 232.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_3" type="Button" parent="telephone_keys_buttons"]
+margin_left = 560.0
+margin_top = 112.0
+margin_right = 712.0
+margin_bottom = 232.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_4" type="Button" parent="telephone_keys_buttons"]
+margin_left = 160.0
+margin_top = 264.0
+margin_right = 312.0
+margin_bottom = 384.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_5" type="Button" parent="telephone_keys_buttons"]
+margin_left = 360.0
+margin_top = 264.0
+margin_right = 512.0
+margin_bottom = 384.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_6" type="Button" parent="telephone_keys_buttons"]
+margin_left = 560.0
+margin_top = 264.0
+margin_right = 712.0
+margin_bottom = 384.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_7" type="Button" parent="telephone_keys_buttons"]
+margin_left = 160.0
+margin_top = 416.0
+margin_right = 312.0
+margin_bottom = 536.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_8" type="Button" parent="telephone_keys_buttons"]
+margin_left = 360.0
+margin_top = 416.0
+margin_right = 512.0
+margin_bottom = 536.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button_9" type="Button" parent="telephone_keys_buttons"]
+margin_left = 160.0
+margin_top = 112.0
+margin_right = 312.0
+margin_bottom = 232.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="telephone_cabin" type="Sprite" parent="."]
+position = Vector2( 816, 417 )
+scale = Vector2( 1.01, 0.754545 )
+texture = ExtResource( 1 )
+
+[node name="advertisement_1" type="Label" parent="."]
+margin_left = 1176.0
+margin_top = 88.0
+margin_right = 1472.0
+margin_bottom = 293.0
+custom_fonts/font = SubResource( 1 )
+text = "SI TIENE UNA 
+FIESTA 
+VISITE
+FRAN VÁZQUEZ 3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="advertisement_2" type="Label" parent="."]
+margin_left = 208.0
+margin_top = 568.0
+margin_right = 1697.0
+margin_bottom = 775.0
+custom_fonts/font = SubResource( 3 )
+text = "ESTA CABINA ES DE USO PÚBLICO, 
+POR ELLO LE FALTAN 
+TECLAS, SI QUIERE LLAMAR A 
+LA POLICÍA (999) SÍ PUEDE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="telephone_keys" type="Node2D" parent="."]
+
+[node name="2" type="Label" parent="telephone_keys"]
+margin_left = 424.0
+margin_top = 136.0
+margin_right = 464.0
+margin_bottom = 203.0
+custom_fonts/font = SubResource( 2 )
+text = "2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="3" type="Label" parent="telephone_keys"]
+margin_left = 616.0
+margin_top = 136.0
+margin_right = 656.0
+margin_bottom = 203.0
+custom_fonts/font = SubResource( 2 )
+text = "3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4" type="Label" parent="telephone_keys"]
+margin_left = 216.0
+margin_top = 288.0
+margin_right = 256.0
+margin_bottom = 355.0
+custom_fonts/font = SubResource( 2 )
+text = "4"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="5" type="Label" parent="telephone_keys"]
+margin_left = 424.0
+margin_top = 288.0
+margin_right = 464.0
+margin_bottom = 355.0
+custom_fonts/font = SubResource( 2 )
+text = "5"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="6" type="Label" parent="telephone_keys"]
+margin_left = 616.0
+margin_top = 280.0
+margin_right = 656.0
+margin_bottom = 347.0
+custom_fonts/font = SubResource( 2 )
+text = "6"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="7" type="Label" parent="telephone_keys"]
+margin_left = 216.0
+margin_top = 432.0
+margin_right = 256.0
+margin_bottom = 569.0
+custom_fonts/font = SubResource( 2 )
+text = "7
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="8" type="Label" parent="telephone_keys"]
+margin_left = 424.0
+margin_top = 432.0
+margin_right = 464.0
+margin_bottom = 499.0
+custom_fonts/font = SubResource( 2 )
+text = "8"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="9" type="Label" parent="telephone_keys"]
+margin_left = 616.0
+margin_top = 432.0
+margin_right = 656.0
+margin_bottom = 569.0
+custom_fonts/font = SubResource( 2 )
+text = "9
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1" type="Label" parent="telephone_keys"]
+margin_left = 216.0
+margin_top = 128.0
+margin_right = 256.0
+margin_bottom = 195.0
+custom_fonts/font = SubResource( 2 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="telephone_keys_buttons/Button_1" to="." method="_on_Button_1_pressed"]
+[connection signal="pressed" from="telephone_keys_buttons/Button_2" to="." method="_on_Button_2_pressed"]
+[connection signal="pressed" from="telephone_keys_buttons/Button_3" to="." method="_on_Button_3_pressed"]
+[connection signal="pressed" from="telephone_keys_buttons/Button_4" to="." method="_on_Button_4_pressed"]
+[connection signal="pressed" from="telephone_keys_buttons/Button_5" to="." method="_on_Button_5_pressed"]
+[connection signal="pressed" from="telephone_keys_buttons/Button_6" to="." method="_on_Button_6_pressed"]
+[connection signal="pressed" from="telephone_keys_buttons/Button_7" to="." method="_on_Button_7_pressed"]
+[connection signal="pressed" from="telephone_keys_buttons/Button_8" to="." method="_on_Button_8_pressed"]
+[connection signal="pressed" from="telephone_keys_buttons/Button_9" to="." method="_on_Button_9_pressed"]

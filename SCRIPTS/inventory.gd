@@ -1,0 +1,81 @@
+extends Node2D
+
+
+
+
+func _input(_event):
+	if Input.is_action_pressed("inventory"):
+		if Blink.inventory_cor:
+# warning-ignore:return_value_discarded
+			get_tree().change_scene("res://SCENES/corridor.tscn")
+		if Blink.inventory_bars:
+# warning-ignore:return_value_discarded
+			get_tree().change_scene("res://SCENES/prision.tscn")
+		if Blink.inventory_str:
+# warning-ignore:return_value_discarded
+			get_tree().change_scene("res://SCENES/street.tscn")
+		if Blink.inventory_private:
+# warning-ignore:return_value_discarded
+			get_tree().change_scene("res://SCENES/private.tscn")
+		if Blink.inventory_map:
+			Blink.out = false
+# warning-ignore:return_value_discarded
+			get_tree().change_scene("res://SCENES/map.tscn")
+		if Blink.in_clues and Blink.i:
+			Blink.i = false
+# warning-ignore:return_value_discarded
+			get_tree().change_scene("res://SCENES/case_!_2.tscn")
+		if Blink.inventory_house:
+# warning-ignore:return_value_discarded
+			get_tree().change_scene("res://SCENES/house_building_1.tscn")
+		if Blink.inventory_cor_1:
+# warning-ignore:return_value_discarded
+			get_tree().change_scene("res://SCENES/corridor_1.tscn")
+	elif Input.is_action_pressed("object_1") and Blink.showing_advert == false:
+		if Blink.in_clues:
+			Blink.showing_advert = true
+			$advert.show()
+			yield(get_tree().create_timer(1), "timeout")
+			$advert.hide()
+			Blink.showing_advert = false
+		else:
+			Blink.showing_advert = true
+			$advert_2.show()
+			$advert_2.hide()
+			Blink.showing_advert = false
+	elif Input.is_action_pressed("object_2") and Blink.in_clues == true and Blink.i:
+# warning-ignore:return_value_discarded
+		get_tree().change_scene("res://SCENES/street_useful_map.tscn")
+	elif Input.is_action_pressed("object_3"):
+		if Blink.in_clues == false:
+			Blink.cup = false
+			$water_cup.hide()
+		elif Blink.in_clues:
+			Blink.info_possible = true
+			Blink.cup = false
+			$water_cup.hide()
+			Blink.clues.insert(0, "Vaso de agua")
+	elif Input.is_action_pressed("object_5"):
+		if Blink.business_card:
+# warning-ignore:return_value_discarded
+			get_tree().change_scene("res://SCENES/business_card.tscn")
+func _ready():
+	if Blink.in_clues:
+		$better_not.show()
+	else:
+		$better_not.hide()
+	$coin_icon/lb_money.text = str(Blink.money)
+	if Blink.cup:
+# warning-ignore:standalone_expression
+		$water_cup.show()
+	if Blink.identification:
+		$identification.show()
+	if Blink.knife:
+		$knife.show()
+	if Blink.business_card:
+		$business_card.show()
+
+
+func _on_better_not_pressed():
+# warning-ignore:return_value_discarded
+	hide()
